@@ -1,0 +1,22 @@
+<div>
+  <% @user.meetings.each do |meeting| %>
+    <div>
+      <ul>
+        <li> <strong> <%= meeting.name %> </strong> </li>
+        <li> <%= meeting.description %> </li>
+        <li> <%= meeting.location %> </li>
+        <li> <%= meeting.date %> </li>
+      </ul>
+    </div>
+  <% end %>
+</div>
+<div>
+  <h3>meetings Upcoming to</h3>
+  <ol>
+  <% @user.meetings.past.each do |e| %> 
+    <li><%= e.name %></li>
+    <% end %>
+  </ol>
+      <br>
+</div>
+<%= link_to 'meetings', meetings_path %>
