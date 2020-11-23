@@ -1,0 +1,50 @@
+<%= links_display%> 
+<%# Logged in as (@user) %>
+<h3> Upcoming events to attend </h3>
+<% @events.each do |event| %>
+
+
+    <div>
+      <ul>
+        <li> <strong> <%= event.name %> </strong> </li>
+        <li> <%= event.description %> </li>
+        <li> <%= event.location %> </li>
+        <li> <%= event.date %> </li>
+        <li>By: <%= event.creator_id.to_s %> </li>
+      </ul>
+       <div> <%= form_with(url: "/events/#{event.id}/attend", local: true) do |form| %>
+       <div class="actions">
+        <%= display_attend_button(form) %>
+       </div>
+       <% end %>
+     </div>
+      <br>
+    </div>
+
+  <% end %>
+
+<h3> Past events </h3>
+  <% @past_events.each do |past| %>
+      <div>
+        <ul>
+          <li> <strong> <%= past.name %> </strong> </li>
+          <li> <%= past.description %> </li>
+          <li> <%= past.location %> </li>
+          <li> <%= past.date %> </li>
+          <li>By: <%= past.creator_id.to_s %> </li>
+        </ul>
+      </div>
+        <% end %>
+  <h3> Upcoming events </h3>
+  <% @future_events.each do |past| %>
+      <div>
+        <ul>
+          <li> <strong> <%= past.name %> </strong> </li>
+          <li> <%= past.description %> </li>
+          <li> <%= past.location %> </li>
+          <li> <%= past.date %> </li>
+          <li>By: <%= past.creator_id.to_s %> </li>
+        </ul>
+      </div>
+
+    <% end %>
