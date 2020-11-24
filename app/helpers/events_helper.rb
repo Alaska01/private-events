@@ -1,7 +1,5 @@
 module EventsHelper
-    def display_attend_button(form)
-        if current_user
-          return form.submit "Attend"
-         end
-    end
+  def display_attend_button(form)
+    return form.submit 'Attend' if current_user
+  end
 end
