@@ -1,18 +1,16 @@
 class EventsController < ApplicationController
   def index
-    @meetings = Meeting.all
-    # @pasts = current_user.attended_events.past
-    # @meetings = Meeting.upcoming 
-    @past_events = Meeting.past
-    @future_events = Meeting.future
+    @events = Event.all
+    @past_events = Event.past
+    @future_events = Event.future
 
   end
-  
+
   def create
-        @meeting = current_user.meetings.build(meeting_params)
-        if @meeting.save
+        @event = current_user.events.build(event_params)
+        if @event.save
           flash[:notice] = 'Event was created successfully'
-          redirect_to meetings_path
+          redirect_to events_path
         else
           flash[:alert] = 'Woops something went wrong'
           render 'new'
@@ -20,7 +18,17 @@ class EventsController < ApplicationController
     end
 
     def show
-      @meeting = Meeting.find(params[:id])
+      @event = event.find(params[:id])
+    end
+ 
+    def new
+      @event = Event.new    
+    end
+
+    private
+  def event_params
+    params.require(:event).permit(:name, :description, :location, :date)
   end
+
 
 end

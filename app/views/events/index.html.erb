@@ -1,5 +1,4 @@
-<%= links_display%> 
-<%# Logged in as (@user) %>
+ <h2> Logged<%=  @current_user.name %></h2>
 <h3> Upcoming events to attend </h3>
 <% @events.each do |event| %>
 
