@@ -1,6 +1,6 @@
 # Private-Events
 
-- In this project, we built a site named private events which allows users to create events. Users can create events and send invitations and parties. Events take place at a specific date and at a location. The main goal is to put in practice the main concepts of Associations in rails.
+In this project, we built a site named private events which allows users to create events. Users can create events and send invitations. Events take place at a specific date and at a location. The main goal is to put in practice the main concepts of Associations in rails.
 
 ## Built With
 - Ruby 
@@ -13,25 +13,30 @@
 - Invitation association model
 
 ## Getting Started
-- To get a local copy of the repository please run the following commands on your terminal:
+To get a local copy of the repository please run the following commands on your terminal:
 
 $ cd <folder>
+
 $ git clone https://github.com/Alaska01/private-events.git
+
 $ cd private-events
+
 $ bundle install 
+
 $ yarn install --check-files
+
 $ rails db:migrate
 
 ## Running the tests
 You will need to have installed Rspec on your machine
 
-- #From terminal
+#From terminal
 $ sudo apt-get install -y ruby-rspec
 
-- #Run rspec command for all tests from project root folder
+#Run rspec command for all tests from project root folder
 $ rspec
 
-- #Run rspec command on models
+#Run rspec command on models
 $ rspec spec/models/user_spec.rb
 $ rspec spec/models/event_spec.rb
 
