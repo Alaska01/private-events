@@ -2,24 +2,15 @@
 
 <div>
     <div>
-      <ul>
-        <li> <strong> <%= @event.title %> </strong> </li>
-        <li> <%= @event.description %> </li>
-        <li> <%= @event.location %> </li>
-        <li> <%= @event.event_date %> </li>
-        <li>BY: <%= @event.creator_id.to_s %> </li>
-      </ul>
+     
+         <strong> <%= @event.title %> </strong> <br>
+         <%= @event.description %> <br>
+         <%= @event.location %> <br>
+         <%= @event.event_date %> <br>
+        BY: <%= @event.creator_id.to_s %> <br>
+      
     </div>
 
-<% if current_user %>
- <div>
- <%= form_with(url: "/events/#{@event.id}/attend", local: true) do |form| %>
-    <div class="actions">
-      <%= display_attend_button(form) %>
-    </div>
-     <% end %>
-  </div>
-<% end %>
 
     <h3>Attendees</h3>
       <% @event.invitations.each do |invitation| %>
