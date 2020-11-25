@@ -42,14 +42,14 @@ $ rspec spec/models/event_spec.rb
 
 ## Author Details::
 
-👤 **Popoola Grace Boluwatife**
+👤 **Popoola Grace Boluwatife***
 
 - Github: [Github](https://github.com/GraceOyiza)
 - Twitter: [Twitter](https://twitter.com/_PopsonGrace)
 - E-mail: <a href="mailto:graceoyiza13@gmail.com?subject=Hello Grace!">Email</a>
 - LinkedIn: [Linkedin](https://www.linkedin.com/in/grace-popoola)
 
-👤 **Aye Daniel A**
+👤 **Aye Daniel A***
 
 - Github: [Github](https://github.com/Alaska01)
 - Twitter: [Twitter](https://twitter.com/AyeAsoo)
