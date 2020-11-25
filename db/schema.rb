@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(version: 2020_11_23_163522) do
   end
 
   create_table "invitations", force: :cascade do |t|
+    t.integer "attendee_id"
+    t.integer "attended_event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["attended_event_id"], name: "index_invitations_on_attended_event_id"
+    t.index ["attendee_id"], name: "index_invitations_on_attendee_id"
   end
 
   create_table "users", force: :cascade do |t|

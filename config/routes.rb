@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
+  get 'attend_event', to: 'events#attend_event'
+ 
  
 end

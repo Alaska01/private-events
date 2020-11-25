@@ -1,20 +1,26 @@
-<h1>events#show</h1>
+<h1>events</h1>
 
 <div>
     <div>
      
-         <strong> <%= @event.title %> </strong> <br>
+         <strong> <%= @event.name %> </strong> <br>
          <%= @event.description %> <br>
          <%= @event.location %> <br>
-         <%= @event.event_date %> <br>
+         <%= @event.date %> <br>
         BY: <%= @event.creator_id.to_s %> <br>
       
     </div>
 
 
     <h3>Attendees</h3>
-      <% @event.invitations.each do |invitation| %>
-       <p> <%= invitation.to_s %></p>
+      <% @event.attendees.each do |attendee| %>
+       <p> <%= attendee.name %></p>
+       
       <% end %>
 
+      <%= link_to "Events Listing", events_path %>
+      
+
 </div>
+
+

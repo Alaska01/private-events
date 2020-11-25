@@ -17,12 +17,24 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def new
     @event = Event.new
   end
+
+  def attend_event
+    @event = Event.find(params[:format])
+    @invitation = Invitation.new(attendee: current_user, attended_event: @event)
+    if @invitation.save
+      redirect_to event_path(@event)
+    else
+      render "event"
+    end
+  end
+
+
 
   private
 

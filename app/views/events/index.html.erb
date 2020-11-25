@@ -1,3 +1,4 @@
+<%= link_to 'User Show Page', user_path(current_user) %>
  <h2> Welcome <%=  @current_user.name %></h2>
 <h3> Upcoming events to attend </h3>
 <% @events.each do |event| %>
@@ -10,6 +11,8 @@
          <%= event.location %> <br>
          <%= event.date %> <br>
          By: <%= event.creator_id.to_s %> <br>
+        
+         <%= link_to 'Attend Event', attend_event_path(event) %>
   
      </div>
       <br>
@@ -38,3 +41,4 @@
       </div>
 
     <% end %>
+   
