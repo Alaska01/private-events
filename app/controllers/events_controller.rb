@@ -30,14 +30,9 @@ class EventsController < ApplicationController
     if @invitation.save
       redirect_to event_path(@event)
     else
-      render "event"
+      render 'event'
     end
   end
-
-  def talk
-
-  end
-
 
   private
 
