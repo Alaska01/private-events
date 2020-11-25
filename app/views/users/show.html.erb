@@ -1,0 +1,22 @@
+<div>
+  <% @user.events.each do |event| %>
+    <div>
+      
+        <strong> <%= event.name %> </strong> <br>
+        <%= event.description %> <br>
+        <%= event.location %> <br>
+        <%= event.date %> <br>
+      
+    </div>
+  <% end %>
+</div>
+<div>
+  <h3>events Upcoming to</h3>
+  <ol>
+  <% @user.events.past.each do |e| %> 
+   <%= e.name %>
+    <% end %>
+  </ol>
+      <br>
+</div>
+<%= link_to 'events', events_path %>

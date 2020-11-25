@@ -1,0 +1,44 @@
+<%= link_to 'User Show Page', user_path(current_user) %>
+ <h2> Welcome <%=  @current_user.name %></h2>
+<h3> Upcoming events to attend </h3>
+<% @events.each do |event| %>
+
+
+    <div>
+      
+         <strong> <%= event.name %> </strong> <br>
+         <%= event.description %> <br>
+         <%= event.location %> <br>
+         <%= event.date %> <br>
+         By: <%= event.creator_id.to_s %> <br>
+        
+         <%= link_to 'Attend Event', attend_event_path(event) %>
+  
+     </div>
+      <br>
+    </div>
+
+  <% end %>
+
+<h3> Past events </h3>
+  <% @past_events.each do |past| %>
+      <div>
+           <strong> <%= past.name %> </strong> <br>
+           <%= past.description %> <br>
+           <%= past.location %> <br>
+           <%= past.date %> <br>
+          By: <%= past.creator_id.to_s %>  <br>
+      </div>
+        <% end %>
+  <h3> Upcoming events </h3>
+  <% @future_events.each do |past| %>
+      <div>
+           <strong> <%= past.name %> </strong> <br>
+           <%= past.description %> <br>
+           <%= past.location %> <br>
+           <%= past.date %> <br>
+          By: <%= past.creator_id.to_s %> <br>
+      </div>
+
+    <% end %>
+   

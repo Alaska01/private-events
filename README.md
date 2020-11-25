@@ -1,24 +1,63 @@
-# README
+# Private-Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, we built a site named private events which allows users to create events. Users can create events and send invitations. Events take place at a specific date and at a location. The main goal is to put in practice the main concepts of Associations in rails.
 
-Things you may want to cover:
+## Built With
+- Ruby 
+- Ruby on Rails
+- Rspec
 
-* Ruby version
+## Models Created and Associations
+- User model
+- Event model
+- Invitation association model
 
-* System dependencies
+## Getting Started
+To get a local copy of the repository please run the following commands on your terminal:
 
-* Configuration
+$ cd <folder>
 
-* Database creation
+$ git clone https://github.com/Alaska01/private-events.git
 
-* Database initialization
+$ cd private-events
 
-* How to run the test suite
+$ bundle install 
 
-* Services (job queues, cache servers, search engines, etc.)
+$ yarn install --check-files
 
-* Deployment instructions
+$ rails db:migrate
 
-* .....
+## Running the tests
+You will need to have installed Rspec on your machine
+
+#From terminal
+$ sudo apt-get install -y ruby-rspec
+
+#Run rspec command for all tests from project root folder
+$ rspec
+
+#Run rspec command on models
+$ rspec spec/models/user_spec.rb
+$ rspec spec/models/event_spec.rb
+
+## Author Details::
+
+👤 **Popoola Grace Boluwatife***
+
+- Github: [Github](https://github.com/GraceOyiza)
+- Twitter: [Twitter](https://twitter.com/_PopsonGrace)
+- E-mail: <a href="mailto:graceoyiza13@gmail.com?subject=Hello Grace!">Email</a>
+- LinkedIn: [Linkedin](https://www.linkedin.com/in/grace-popoola)
+
+👤 **Aye Daniel A***
+
+- Github: [Github](https://github.com/Alaska01)
+- Twitter: [Twitter](https://twitter.com/AyeAsoo)
+- E-mail: <a href="mailto:aadaniel108@gmail.com?subject=Hello Daniel!">Email</a>  
+- Linkedin: [Linkedin](https://www.linkedin.com/in/daniel-asoo-aye/)
+
+## Show your support
+Give ⭐ Star me on GitHub — it helps!
+
+## 📝 License
+This project is MIT licensed.
