@@ -34,6 +34,9 @@ class EventsController < ApplicationController
     end
   end
 
+  def talk
+
+  end
 
 
   private
